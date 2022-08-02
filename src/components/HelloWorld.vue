@@ -10,6 +10,12 @@ const store = useStore()
 
 const { count, doubleCount } = storeToRefs(store)
 const { increment } = store
+
+const restart = () => {
+  // Usando composition api en store no implementa método $reset nativamente
+  // store.$reset()
+  count.value = 0
+}
 </script>
 
 <template>
@@ -20,6 +26,9 @@ const { increment } = store
   </div>
   <div class="card">
     <p>Double count: {{ doubleCount }}</p>
+  </div>  
+  <div class="card">
+    <button type="button" @click="restart">Reiniciar</button>
   </div>
 </template>
 
