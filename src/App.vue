@@ -4,18 +4,10 @@
 import HelloWorld from './components/HelloWorld.vue'
 import HpCharacters from './components/HpCharacters.vue';
 </script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-  <HpCharacters></HpCharacters>
+    <div class="container mx-auto px-1 py-5">
+      <HpCharacters></HpCharacters>
+    </div>
 </template>
 
 <style scoped>
